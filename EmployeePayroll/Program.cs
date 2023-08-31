@@ -1,9 +1,5 @@
 ﻿using EmployeePayroll;
 
-[Yesterday 17:50] Riya Susan Reji
-
-using PayrollService;
-
 using System;
 
 using System.Net;
@@ -46,11 +42,11 @@ namespace EmployeeManagement
 
             Operation operations = new Operation();
 
-            operations.AddEmployee_payroll(employee);
+            //operations.AddEmployee_payroll(employee);
 
             //operations.DeleteEmployee_payroll(14);
 
-            operations.GetAllEmployee_payroll();
+           // operations.GetAllEmployee_payroll();
 
             //Payroll employee1 = new Payroll()
 
@@ -85,6 +81,8 @@ namespace EmployeeManagement
             //};
 
             //operations.UpdateEmployee_payroll(employee1);
+            //operations.ParticularRange("2023-01-01");
+            operations.SumAvgMinMax();
 
         }
 

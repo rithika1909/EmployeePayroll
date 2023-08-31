@@ -143,6 +143,26 @@ department = @department, basic_pay = @basic_pay, deductions = @deductions, taxa
 where Id=@Id
 End
 
+Create Procedure Range(
+@start_date date
+)
+As
+Begin
+Select * from employee_payroll where start_date between CAST(@start_date as Date) and GETDATE();
+End
  
+Create Procedure Calculations
+As
+Begin
+Select 
+Sum(cast(salary as bigint))as Sum , 
+Avg(cast(salary as bigint))as Avg,
+Min(cast(salary as bigint))as Min,
+Max(cast(salary as bigint))as Max from employee_payroll; 
+End
 
 EXEC GetAllEmployee_payroll;
+
+UPDATE employee_payroll
+SET phone = 123, Address = 'abcd', Department ='IT', basic_pay = 1000, deductions = 100, taxable_pay = 50, income_tax = 100, net_pay = 200
+WHERE name = 'd';
