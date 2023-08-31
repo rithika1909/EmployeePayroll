@@ -1,9 +1,5 @@
 ﻿using EmployeePayroll;
 
-[Yesterday 17:50] Riya Susan Reji
-
-using PayrollService;
-
 using System;
 
 using System.Net;
