@@ -82,7 +82,40 @@ namespace EmployeeManagement
 
             //operations.UpdateEmployee_payroll(employee1);
             //operations.ParticularRange("2023-01-01");
-            operations.SumAvgMinMax();
+            //operations.SumAvgMinMax();
+            List<Payroll> list = new List<Payroll>();
+            list.Add(new Payroll()
+            {
+                Name = "Rithika",
+                Salary = 50000,
+                Start_Date = "01-05-2000",
+                Gender = 'F',
+                Phone = "1234567890",
+                Address = "Chennai",
+                Department = "Finance",
+                Basic_pay = 20000,
+                Deductions = 500,
+                Taxable_pay = 100,
+                Income_tax = 1000,
+                Net_pay = 35000
+            });
+            list.Add(new Payroll()
+            {
+                Name = "Zoya",
+                Salary = 60000,
+                Start_Date = "01-06-2010",
+                Gender = 'F',
+                Phone = "1234567890",
+                Address = "Chennai",
+                Department = "Tech",
+                Basic_pay = 11000,
+                Deductions = 200,
+                Taxable_pay = 100,
+                Income_tax = 1500,
+                Net_pay = 30000
+            });
+            operations.UsingWithThread(list);
+            operations.UsingWithoutThread(list);
 
         }
 
